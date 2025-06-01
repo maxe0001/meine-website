@@ -1,0 +1,186 @@
+/* =====================================================
+   Bar / Pub Theme – style.css
+   ===================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;600;700&display=swap');
+
+:root {
+  /* Farbakzente & Variablen */
+  --accent: #d6a75f;          /* Messing / Bier-Schaum */
+  --accent-dark: #b38235;
+  --bg-dark: #0f0f0f;        /* sehr dunkles Holz */
+  --bg-wood-img: url('/src/img/wood-bg.jpg');
+  --card-bg: rgba(255, 255, 255, 0.95);
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* ---------- Grundlayout ---------- */
+*, *::before, *::after { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: grid;
+  grid-template-columns: 1fr 260px;           /* Content + Sidebar */
+  grid-template-rows: auto 1fr auto;          /* Header | Main | Footer */
+  grid-template-areas:
+    "header header"
+    "main   sidebar"
+    "footer footer";
+  font-family: 'Montserrat', sans-serif;
+  background: var(--bg-dark) var(--bg-wood-img) center / cover fixed;
+  color: #eee;                                /* Default-Textfarbe */
+}
+
+/* ---------- Header & Navigation ---------- */
+header {
+  grid-area: header;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(4px);
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  gap: 2rem;
+  padding: 1rem;
+}
+
+nav a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  transition: color 0.2s;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: var(--accent);
+  transition: width 0.25s;
+}
+
+nav a:hover {
+  color: #fff;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ---------- Sidebar ---------- */
+aside {
+  grid-area: sidebar;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(3px);
+  padding: 1.5rem;
+  font-family: 'Merriweather', serif;
+  font-weight: 700;
+  color: #fff;
+}
+
+aside p { margin: 0; }
+
+/* ---------- Main ---------- */
+main {
+  grid-area: main;
+  padding: 2rem;
+  overflow-y: auto;           /* Nur der Content scrollt */
+}
+
+h1 {
+  font-family: 'Merriweather', serif;
+  font-size: 2.5rem;
+  margin-top: 0;
+  color: #fff;
+}
+
+/* ---------- Recipe Grid ---------- */
+.recipes {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.recipe-card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.recipe-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.recipe-card img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.recipe-card h2 {
+  margin: 0;
+  padding: 1rem;
+  background: var(--accent);
+  color: #000;
+  font-family: 'Merriweather', serif;
+  font-size: 1.4rem;
+}
+
+.steps {
+  list-style: none;
+  padding: 1rem;
+  margin: 0;
+  color: #333;
+}
+
+.steps li {
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+}
+
+.icon { margin-right: 0.6rem; }
+
+/* ---------- Footer ---------- */
+footer {
+  grid-area: footer;
+  background: rgba(0, 0, 0, 0.85);
+  padding: 0.8rem;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+footer a:hover { color: #fff; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 900px) {
+  body {
+    grid-template-columns: 1fr;             /* Sidebar unterdrücken */
+    grid-template-areas:
+      "header"
+      "main"
+      "footer";
+  }
+  aside { display: none; }
+}

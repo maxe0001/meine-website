@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <title>Bildergalerie</title>
+  <link rel="stylesheet" href="/src/css/style.css" />
+  <style>
+    /* kleines Seiten-spezifisches Grid – kann auch in der globalen CSS landen */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1rem;
+    }
+    figure {
+      margin: 0;
+    }
+    figcaption {
+      text-align: center;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="/src/html/index.html">Start</a>
+      <a href="/src/html/rezepte.html">Rezeptliste</a>
+      <a href="/src/html/bilder.html">Bilder</a>
+      <a href="#">Karte</a>
+    </nav>
+  </header>
+
+  <aside>
+    <p>Random Pics 📸</p>
+  </aside>
+
+  <main>
+    <h1>Bildergalerie</h1>
+
+    <section class="gallery">
+      <!-- 10 Demo-Bilder: https://picsum.photos liefert Zufallsgrafiken -->
+      <!-- Du kannst später eigene Dateien nach src/img kopieren -->
+      <figure>
+        <img src="https://picsum.photos/300?random=1" alt="Random 1" />
+        <figcaption>Bild 1</figcaption>
+      </figure>
+      <figure>
+        <img src="https://picsum.photos/300?random=2" alt="Random 2" />
+        <figcaption>Bild 2</figcaption>
+      </figure>
+      <!-- …weitere Bilder bis Bild 10 -->
+      <figure>
+        <img src="https://picsum.photos/300?random=10" alt="Random 10" />
+        <figcaption>Bild 10</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer>
+    <a href="#">Impressum</a> |
+    <a href="#">Datenschutz</a>
+  </footer>
+</body>
+</html>

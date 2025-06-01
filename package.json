@@ -1,0 +1,20 @@
+{
+  "name": "meine-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "start": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "vite": "^6.3.5"
+  },
+  "dependencies": {
+    "leaflet": "^1.9.4"
+  }
+}
