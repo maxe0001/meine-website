@@ -1,186 +1,103 @@
-/* =====================================================
-   Bar / Pub Theme – style.css
-   ===================================================== */
+/* -------------------------------------------------------
+   BAR-/PUB-THEME  (eine Datei für alle Seiten)
+   ------------------------------------------------------- */
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;600;700&display=swap');
 
-:root {
-  /* Farbakzente & Variablen */
-  --accent: #d6a75f;          /* Messing / Bier-Schaum */
-  --accent-dark: #b38235;
-  --bg-dark: #0f0f0f;        /* sehr dunkles Holz */
-  --bg-wood-img: url('/src/img/wood-bg.jpg');
-  --card-bg: rgba(255, 255, 255, 0.95);
-  --shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+/* === Grund­variablen =================================== */
+:root{
+  --accent:      #d6a75f;          /* Messing-Khaki (Titelbalken)      */
+  --bg-dark:     #000;
+  --bg-wood-img: url("../img/wood-bg.jpg");
+  --card-bg:     #fff;             /* deckendes Weiß                   */
+  --radius:      12px;
+  --shadow:      0 6px 20px rgba(0,0,0,.45);
+  --font-head:   "Merriweather", serif;
+  --font-body:   "Montserrat", sans-serif;
 }
 
-/* ---------- Grundlayout ---------- */
-*, *::before, *::after { box-sizing: border-box; }
+/* === Reset & Grund­layout ============================== */
+*,*:before,*:after{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;font-family:var(--font-body);color:#333;}
 
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
+body{
+  background:var(--bg-dark);                /* Standard: Schwarz */
+  display:grid;
+  grid-template:
+    "header header" auto
+    "main   sidebar" 1fr
+    "footer footer" auto / 1fr 260px;
+  overflow:hidden;
+}
+header{grid-area:header;background:#000;padding:1rem;}
+main  {grid-area:main;overflow-y:auto;padding:2rem;}
+aside {grid-area:sidebar;background:#111c;color:#fff;padding:1.5rem;overflow-y:auto;}
+footer{grid-area:footer;background:#000a;text-align:center;padding:.6rem;}
+
+@media(max-width:900px){
+  body{grid-template:"header" auto "main" 1fr "footer" auto / 1fr;}
+  aside{display:none;}
 }
 
-body {
-  display: grid;
-  grid-template-columns: 1fr 260px;           /* Content + Sidebar */
-  grid-template-rows: auto 1fr auto;          /* Header | Main | Footer */
-  grid-template-areas:
-    "header header"
-    "main   sidebar"
-    "footer footer";
-  font-family: 'Montserrat', sans-serif;
-  background: var(--bg-dark) var(--bg-wood-img) center / cover fixed;
-  color: #eee;                                /* Default-Textfarbe */
+/* === Navigation ======================================== */
+nav{display:flex;gap:1.6rem;flex-wrap:wrap;}
+nav a{color:#fff;text-decoration:none;font-weight:600;position:relative;}
+nav a::after{content:"";position:absolute;left:0;bottom:-4px;width:0;height:2px;background:var(--accent);transition:width .25s;}
+nav a:hover::after{width:100%;}
+
+/* === Karten-Layout (Basis) ============================== */
+.recipes{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(320px,1fr));  /* groß genug */
+  gap:2rem;
+  margin-top:2rem;
 }
-
-/* ---------- Header & Navigation ---------- */
-header {
-  grid-area: header;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(4px);
+.recipe-card{
+  background:var(--card-bg);
+  border-radius:var(--radius);
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  display:flex;
+  flex-direction:column;
+  transition:transform .2s;
 }
-
-nav {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  gap: 2rem;
-  padding: 1rem;
+.recipe-card:hover{transform:translateY(-6px);}
+.recipe-card img{
+  width:100%;
+  aspect-ratio:4/3;
+  object-fit:cover;              /* Bild füllt die Fläche, nichts wird beschnitten */
 }
-
-nav a {
-  color: var(--accent);
-  text-decoration: none;
-  font-weight: 600;
-  position: relative;
-  transition: color 0.2s;
+.recipe-card h2{
+  background:var(--accent);
+  color:#000;
+  padding:.8rem 1rem;
+  font-family:var(--font-head);
+  font-size:1.45rem;
 }
+.steps{list-style:none;padding:1.2rem 1.4rem 1.6rem;margin:0;line-height:1.5;color:#333;}
+.steps li{margin:.55rem 0;display:flex;align-items:center;}
+.icon{margin-right:.6rem;font-size:1.1rem;}
 
-nav a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -4px;
-  width: 0%;
-  height: 2px;
-  background: var(--accent);
-  transition: width 0.25s;
+/* === Seitenspezifische Klassen ========================= */
+
+/* --- Startseite: schwarzer Background & Begrüßung mittig */
+body.page-home main{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
 }
+body.page-home main h1{font-size:3.2rem;color:#fff;font-family:var(--font-head);margin-bottom:.5rem;}
 
-nav a:hover {
-  color: #fff;
+/* --- Rezeptseite: Holz & größere Cards ----------------- */
+body.page-rezepte{
+  background:#000 var(--bg-wood-img) center/cover fixed;
 }
+body.page-rezepte .recipe-card img{max-height:340px;}   /* zeigt das ganze Bild */
+body.page-rezepte .steps{color:#222;}                   /* dunklere Schrift */
 
-nav a:hover::after {
-  width: 100%;
-}
+/* Platzhalter für Bilder- oder Karten-Seite – später nutzbar */
+/* body.page-bilder{ --accent:#3498db; } */
+/* body.page-karte { --accent:#27ae60; } */
 
-/* ---------- Sidebar ---------- */
-aside {
-  grid-area: sidebar;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(3px);
-  padding: 1.5rem;
-  font-family: 'Merriweather', serif;
-  font-weight: 700;
-  color: #fff;
-}
-
-aside p { margin: 0; }
-
-/* ---------- Main ---------- */
-main {
-  grid-area: main;
-  padding: 2rem;
-  overflow-y: auto;           /* Nur der Content scrollt */
-}
-
-h1 {
-  font-family: 'Merriweather', serif;
-  font-size: 2.5rem;
-  margin-top: 0;
-  color: #fff;
-}
-
-/* ---------- Recipe Grid ---------- */
-.recipes {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-.recipe-card {
-  background: var(--card-bg);
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: var(--shadow);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.recipe-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
-}
-
-.recipe-card img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-}
-
-.recipe-card h2 {
-  margin: 0;
-  padding: 1rem;
-  background: var(--accent);
-  color: #000;
-  font-family: 'Merriweather', serif;
-  font-size: 1.4rem;
-}
-
-.steps {
-  list-style: none;
-  padding: 1rem;
-  margin: 0;
-  color: #333;
-}
-
-.steps li {
-  margin: 0.5rem 0;
-  display: flex;
-  align-items: center;
-}
-
-.icon { margin-right: 0.6rem; }
-
-/* ---------- Footer ---------- */
-footer {
-  grid-area: footer;
-  background: rgba(0, 0, 0, 0.85);
-  padding: 0.8rem;
-  text-align: center;
-  font-size: 0.9rem;
-}
-
-footer a {
-  color: var(--accent);
-  text-decoration: none;
-}
-
-footer a:hover { color: #fff; }
-
-/* ---------- Responsive ---------- */
-@media (max-width: 900px) {
-  body {
-    grid-template-columns: 1fr;             /* Sidebar unterdrücken */
-    grid-template-areas:
-      "header"
-      "main"
-      "footer";
-  }
-  aside { display: none; }
+/* === Druckoptimierung ================================== */
+@media print{
+  header,footer,aside{display:none!important;}
+  .recipe-card{page-break-inside:avoid;}
 }

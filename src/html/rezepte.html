@@ -2,13 +2,19 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Rezeptliste</title>
-  <link rel="stylesheet" href="/src/css/style.css" />
+
+  <!-- Basis-Stylesheet -->
+  <link rel="stylesheet" href="../css/style.css">
 </head>
-<body>
+
+<!-- >>> EINZIGE ÄNDERUNG:  class="page-rezepte"  <<< -->
+<body class="page-rezepte">
+
   <header>
     <nav>
-      <a href="/src/html/index.html">Start</a>
+      <a href="/index.html">Start</a>
       <a href="/src/html/rezepte.html">Rezeptliste</a>
       <a href="/src/html/bilder.html">Bilder</a>
       <a href="/src/html/karte.html">Karte</a>
@@ -23,18 +29,18 @@
     <h1>Rezeptliste</h1>
 
     <section class="recipes">
+
       <!-- Karte 1 -->
       <article class="recipe-card">
         <img src="/src/img/cola-bier.webp" alt="Cola Bier">
         <h2>Cola Bier (Diesel)</h2>
         <ol class="steps">
-          <li><span class="icon">🥤</span>Zutaten: Cola und ein Bier</li>
-          <li><span class="icon">⚗️</span>Empfohlen: Coca-Cola Cherry, Vanille oder Classic + Pils (z.B. Warsteiner)</li>
-          <li><span class="icon">🍺</span>Glas zu 80 % mit Bier füllen, danach mit Cola auffüllen</li>
-          <li><span class="icon">❄️</span>Profitipp: Kaltes Bier/Cola nehmen – auf keinen Fall Zero-Produkte!</li>
-          <li><span class="icon">🍻</span>Jetzt das kalte Diesel genießen</li>
+          <li><span class="icon">🥤</span>Zutaten: Cola und Bier</li>
+          <li><span class="icon">⚗️</span>Coca-Cola Cherry / Vanille + Pils</li>
+          <li><span class="icon">🍺</span>Glas zu 80 % mit Bier füllen, dann Cola</li>
+          <li><span class="icon">❄️</span>Eiskalt genießen (keine Zero-Produkte)</li>
+          <li><span class="icon">🍻</span>Kalt servieren</li>
         </ol>
-        
       </article>
 
       <!-- Karte 2 -->
@@ -42,13 +48,13 @@
         <img src="/src/img/cuba-libre.webp" alt="Cuba Libre">
         <h2>Cuba Libre</h2>
         <ol class="steps">
-          <li><span class="icon">🥃</span>Zutaten: Rum (Havanna Club), Cola, Limetten, Rohrzucker, Eis</li>
-          <li><span class="icon">🍋</span>Limettenstücke im Glas leicht zerquetschen</li>
-          <li><span class="icon">🥄</span>4 cl Rum + 12 cl Cola hineingeben</li>
-          <li><span class="icon">❄️</span>Mit Eiswürfeln auffüllen und genießen</li>
+          <li><span class="icon">🥃</span>Rum, Cola, Limetten, Rohrzucker, Eis</li>
+          <li><span class="icon">🍋</span>Limettenstücke leicht zerdrücken</li>
+          <li><span class="icon">🥄</span>4 cl Rum + 12 cl Cola</li>
+          <li><span class="icon">❄️</span>Mit Eiswürfeln auffüllen &amp; genießen</li>
         </ol>
-        
       </article>
+
     </section>
   </main>
 
