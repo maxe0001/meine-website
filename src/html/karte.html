@@ -2,26 +2,28 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Weltkarte</title>
-  <link rel="stylesheet" href="/src/css/style.css" />
+
+  <!-- dein zentrales Styling -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- feste Höhe für das Map-Div -->
   <style>
-    /* Karte braucht feste Höhe, sonst ist sie 0 px hoch */
     #map { height: 80vh; }
   </style>
 </head>
-<body>
+
+<body class="page-karte">
+
   <header>
     <nav>
-      <a href="/src/html/index.html">Start</a>
+      <a href="/index.html">Start</a>
       <a href="/src/html/rezepte.html">Rezeptliste</a>
       <a href="/src/html/bilder.html">Bilder</a>
       <a href="/src/html/karte.html">Karte</a>
     </nav>
   </header>
-
-  <aside>
-    <p>Koordinaten &amp; Infos</p>
-  </aside>
 
   <main>
     <h1>Leaflet-Karte</h1>
@@ -33,7 +35,7 @@
     <a href="#">Datenschutz</a>
   </footer>
 
-  <!--  JS als ES-Modul laden -->
-  <script type="module" src="/src/js/karte.js"></script>
+  <!-- Leaflet & Marker-Grafiken werden in karte.js importiert -->
+  <script type="module" src="../js/karte.js"></script>
 </body>
 </html>

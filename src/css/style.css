@@ -6,21 +6,35 @@
 /* === Grund­variablen =================================== */
 :root{
   --accent:      #d6a75f;          /* Messing-Khaki (Titelbalken)      */
-  --bg-dark:     #000;
+  --bg-dark:     #000;             /* globaler Hintergrund             */
   --bg-wood-img: url("../img/wood-bg.jpg");
-  --card-bg:     #fff;             /* deckendes Weiß                   */
+
+  /* Card & Layout */
+  --card-bg:     #fff;
   --radius:      12px;
   --shadow:      0 6px 20px rgba(0,0,0,.45);
+
+  /* Typografie */
   --font-head:   "Merriweather", serif;
   --font-body:   "Montserrat", sans-serif;
+
+  /* NEU: Textfarben */
+  --text-light:  #d0d0d0;   /* Fließtext auf Schwarz */
+  --text-med:    #aaaaaa;   /* Intro / Unterzeilen  */
+  --text-dark:   #222222;   /* Schritte auf weißer Card */
+  --heading:     #ffffff;   /* Überschriften          */
 }
 
 /* === Reset & Grund­layout ============================== */
 *,*:before,*:after{box-sizing:border-box;margin:0;padding:0;}
-html,body{height:100%;font-family:var(--font-body);color:#333;}
+html,body{
+  height:100%;
+  font-family:var(--font-body);
+  color:var(--text-light);          /* war #333 */
+}
 
 body{
-  background:var(--bg-dark);                /* Standard: Schwarz */
+  background:var(--bg-dark);        /* Standard: Schwarz */
   display:grid;
   grid-template:
     "header header" auto
@@ -47,7 +61,7 @@ nav a:hover::after{width:100%;}
 /* === Karten-Layout (Basis) ============================== */
 .recipes{
   display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(320px,1fr));  /* groß genug */
+  grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
   gap:2rem;
   margin-top:2rem;
 }
@@ -60,11 +74,11 @@ nav a:hover::after{width:100%;}
   flex-direction:column;
   transition:transform .2s;
 }
-.recipe-card:hover{transform:translateY(-6px);}
+.recipe-card:hover{transform:translateY(-6px);} 
 .recipe-card img{
   width:100%;
   aspect-ratio:4/3;
-  object-fit:cover;              /* Bild füllt die Fläche, nichts wird beschnitten */
+  object-fit:cover;
 }
 .recipe-card h2{
   background:var(--accent);
@@ -73,26 +87,33 @@ nav a:hover::after{width:100%;}
   font-family:var(--font-head);
   font-size:1.45rem;
 }
-.steps{list-style:none;padding:1.2rem 1.4rem 1.6rem;margin:0;line-height:1.5;color:#333;}
+.steps{
+  list-style:none;
+  padding:1.2rem 1.4rem 1.6rem;
+  margin:0;
+  line-height:1.5;
+  color:var(--text-dark);           /* dunkler auf Weiß */
+}
 .steps li{margin:.55rem 0;display:flex;align-items:center;}
 .icon{margin-right:.6rem;font-size:1.1rem;}
 
 /* === Seitenspezifische Klassen ========================= */
 
-/* --- Startseite: schwarzer Background & Begrüßung mittig */
+/* --- Startseite --------------------------------------- */
 body.page-home main{
   display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
 }
-body.page-home main h1{font-size:3.2rem;color:#fff;font-family:var(--font-head);margin-bottom:.5rem;}
+body.page-home main h1{font-size:3.2rem;color:var(--heading);font-family:var(--font-head);margin-bottom:.5rem;}
+body.page-home .subtitle{color:var(--text-med);}          /* falls Intro vorhanden */
 
-/* --- Rezeptseite: Holz & größere Cards ----------------- */
+/* --- Rezeptseite -------------------------------------- */
 body.page-rezepte{
   background:#000 var(--bg-wood-img) center/cover fixed;
 }
-body.page-rezepte .recipe-card img{max-height:340px;}   /* zeigt das ganze Bild */
-body.page-rezepte .steps{color:#222;}                   /* dunklere Schrift */
+body.page-rezepte .recipe-card img{max-height:340px;}
+body.page-rezepte .steps{color:var(--text-dark);}          /* sichergestellt */
 
-/* Platzhalter für Bilder- oder Karten-Seite – später nutzbar */
+/* Platzhalter für weitere Seiten ----------------------- */
 /* body.page-bilder{ --accent:#3498db; } */
 /* body.page-karte { --accent:#27ae60; } */
 
