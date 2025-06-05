@@ -1,25 +1,36 @@
 /* -----------------------------------------------------------
-   ES-Modul-Variante – benötigt ein Bundling-/Dev-Server-Setup
-   ----------------------------------------------------------- */
-
+   Leaflet + CSS  (bleibt unverändert)
+----------------------------------------------------------- */
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 
-/* Marker-Grafiken als Imports (funktionieren nur mit Bundler) */
-import iconUrl       from "leaflet/dist/images/marker-icon.png";
-import iconRetinaUrl from "leaflet/dist/images/marker-icon-2x.png";
-import shadowUrl     from "leaflet/dist/images/marker-shadow.png";
+/* -----------------------------------------------------------
+   1 · Eigenes Marker-Icon laden
+      (Datei liegt in  src/img/custom-marker.png)
+----------------------------------------------------------- */
+import myMarkerUrl from "../img/custom-marker.png";          // <— dein Bild
+import shadowUrl   from "leaflet/dist/images/marker-shadow.png"; // Schatten kann bleiben
 
-L.Icon.Default.mergeOptions({ iconUrl, iconRetinaUrl, shadowUrl });
+const myIcon = L.icon({
+  iconUrl:       myMarkerUrl,
+  shadowUrl:     shadowUrl,
+  iconSize:      [32, 48],   // Breite, Höhe  → bei Bedarf anpassen
+  iconAnchor:    [16, 48],   // Punkt, der auf der Koordinate sitzt
+  popupAnchor:   [0, -46]    // Popup-Ballon relativ zur Icon-Spitze
+});
 
-/* ---------- Karte initialisieren -------------------------- */
+/* -----------------------------------------------------------
+   2 · Karte initialisieren
+----------------------------------------------------------- */
 const map = L.map("map").setView([51.96, 7.62], 6);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "&copy; OpenStreetMap-Mitwirkende"
 }).addTo(map);
 
-/* Beispiel-Marker – Dresden */
-L.marker([51.0504, 13.7373])
+/* -----------------------------------------------------------
+   3 · Beispielmarker – Dresden  (mit eigenem Icon)
+----------------------------------------------------------- */
+L.marker([51.0504, 13.7373], { icon: myIcon })
   .addTo(map)
   .bindPopup("Dresden");
