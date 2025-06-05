@@ -10,11 +10,19 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
   "devDependencies": {
     "vite": "^6.3.5"
   },
   "dependencies": {
     "leaflet": "^1.9.4"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maxe0001/meine-website.git"
+  },
+  "bugs": {
+    "url": "https://github.com/maxe0001/meine-website/issues"
+  },
+  "homepage": "https://github.com/maxe0001/meine-website#readme",
+  "description": ""
 }
