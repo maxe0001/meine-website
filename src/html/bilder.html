@@ -2,63 +2,90 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bildergalerie</title>
-  <link rel="stylesheet" href="/src/css/style.css" />
-  <style>
-    /* kleines Seiten-spezifisches Grid – kann auch in der globalen CSS landen */
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-      gap: 1rem;
-    }
-    figure {
-      margin: 0;
-    }
-    figcaption {
-      text-align: center;
-      font-size: 0.9rem;
-    }
-  </style>
+
+  <!-- Zentrales Styling (enthält jetzt auch .gallery-Regeln) -->
+  <link rel="stylesheet" href="../css/style.css" />
 </head>
-<body>
+
+<body class="page-bilder">
+  <!-- ▸ Navigation ------------------------------------------------------ -->
   <header>
     <nav>
-      <a href="/src/html/index.html">Start</a>
+      <a href="/index.html">Start</a>
       <a href="/src/html/rezepte.html">Rezeptliste</a>
-      <a href="/src/html/bilder.html">Bilder</a>
-      <a href="#">Karte</a>
+      <a href="/src/html/bilder.html" class="active">Bilder</a>
+      <a href="/src/html/karte.html">Karte</a>
     </nav>
   </header>
 
+  <!-- ▸ Sidebar --------------------------------------------------------- -->
   <aside>
-    <p>Random Pics 📸</p>
+    <p>Teufelsfrüchte</p>
   </aside>
 
+  <!-- ▸ Hauptbereich ----------------------------------------------------- -->
   <main>
     <h1>Bildergalerie</h1>
 
     <section class="gallery">
-      <!-- 10 Demo-Bilder: https://picsum.photos liefert Zufallsgrafiken -->
-      <!-- Du kannst später eigene Dateien nach src/img kopieren -->
       <figure>
-        <img src="https://picsum.photos/300?random=1" alt="Random 1" />
-        <figcaption>Bild 1</figcaption>
+        <img src="/src/img/feuerfrucht.png" alt="Feuerfrucht">
+        <figcaption>Feuerfrucht</figcaption>
       </figure>
+
       <figure>
-        <img src="https://picsum.photos/300?random=2" alt="Random 2" />
-        <figcaption>Bild 2</figcaption>
+        <img src="/src/img/gumgum.png" alt="Gum-Gum">
+        <figcaption>Gum-Gum</figcaption>
       </figure>
-      <!-- …weitere Bilder bis Bild 10 -->
+
       <figure>
-        <img src="https://picsum.photos/300?random=10" alt="Random 10" />
-        <figcaption>Bild 10</figcaption>
+        <img src="/src/img/mochi Mochi.png" alt="Mochi-Mochi">
+        <figcaption>Mochi-Mochi</figcaption>
+      </figure>
+
+      <figure>
+        <img src="/src/img/festung festung.png" alt="Festung-Festung">
+        <figcaption>Festung-Festung</figcaption>
+      </figure>
+
+      <figure>
+        <img src="/src/img/scroll scroll.png" alt="Scroll-Scroll">
+        <figcaption>Scroll-Scroll</figcaption>
+      </figure>
+
+      <figure>
+        <img src="/src/img/mensch mensch.png" alt="Mensch-Mensch">
+        <figcaption>Mensch-Mensch</figcaption>
+      </figure>
+
+      <figure>
+        <img src="/src/img/ope ope.png" alt="Ope-Ope">
+        <figcaption>Ope-Ope</figcaption>
+      </figure>
+
+      <figure>
+        <img src="/src/img/magnet.png" alt="Magnet">
+        <figcaption>Magnet</figcaption>
+      </figure>
+
+      <figure>
+        <img src="/src/img/trenn trenn.png" alt="Trenn-Trenn">
+        <figcaption>Trenn-Trenn</figcaption>
+      </figure>
+
+      <figure>
+        <img src="/src/img/bomb bomb.png" alt="Bomb-Bomb">
+        <figcaption>Bomb-Bomb</figcaption>
       </figure>
     </section>
   </main>
 
+  <!-- ▸ Footer ----------------------------------------------------------- -->
   <footer>
-  <a href="/src/html/impressum.html">Impressum</a> |
-  <a href="/src/html/datenschutz.html">Datenschutz</a>
-</footer>
+    <a href="/src/html/impressum.html">Impressum</a> |
+    <a href="/src/html/datenschutz.html">Datenschutz</a>
+  </footer>
 </body>
 </html>
