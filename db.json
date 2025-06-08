@@ -1,18 +1,35 @@
 {
   "recipes": [
     {
-      "id": 1,
+      "id": "1",
       "title": "Pulled Pork",
       "image": "src/img/pulled.jpg",
       "createdAt": "2024-06-10",
-      "steps": ["Fleisch würzen", "8 h bei 110 °C garen", "Zupfen & servieren"]
+      "steps": [
+        "Fleisch würzen",
+        "8 h bei 110 °C garen",
+        "Zupfen & servieren"
+      ]
     },
     {
-      "id": 2,
+      "id": "2",
       "title": "Smash Burger",
       "image": "src/img/burger.jpg",
       "createdAt": "2024-06-11",
-      "steps": ["Patty smashen", "Cheese drauf", "Bun & Sauce"]
+      "steps": [
+        "Patty smashen",
+        "Cheese drauf",
+        "Bun & Sauce"
+      ]
+    },
+    {
+      "title": "haxe 2",
+      "image": "",
+      "steps": [
+        "cf"
+      ],
+      "createdAt": "2025-06-20",
+      "id": "83b7"
     }
   ]
 }

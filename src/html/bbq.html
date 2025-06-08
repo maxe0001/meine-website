@@ -1,33 +1,41 @@
-<!DOCTYPE html><html lang="de">
+<!DOCTYPE html>
+<html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BBQ Point</title>
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style.css" />
   <script type="module" src="../js/bbq-app.js" defer></script>
 </head>
-<body class="page-bbq text-zinc-100">
-  <header class="bg-zinc-950 p-4">
-    <nav class="flex gap-6">
-      <!-- übrige Links ... -->
-      <a href="/src/html/bbq.html" class="text-amber-400 font-bold">BBQ Point</a>
+<body class="page-bbq">
+  <header>
+    <nav>
+      <a href="/src/html/index.html">Start</a>
+      <a href="/src/html/rezepte.html">Rezeptliste</a>
+      <a href="/src/html/bilder.html">Bilder</a>
+      <a href="/src/html/karte.html">Karte</a>
+      <a href="/src/html/bbq.html">BBQ Point</a>
     </nav>
   </header>
-
-  <div class="flex h-[calc(100%-4rem)]"> <!-- 4rem = Headerhöhe -->
-    <aside class="w-72 bg-zinc-900 p-4 space-y-4">
-      <!-- Suche, Sort -->
-      <input id="search" class="w-full rounded bg-zinc-800 p-2" placeholder="Rezept suchen">
-      <select id="sort" class="w-full rounded bg-zinc-800 p-2">
+  <aside>
+    <p>BBQ Point – Rezepte-Manager</p>
+  </aside>
+  <main>
+    <section id="bbq-controls">
+      <input id="search" placeholder="Rezept suchen..." />
+      <select id="sort">
         <option value="title">Alphabetisch</option>
         <option value="createdAt">Datum</option>
       </select>
-      <button id="btn-new" class="w-full bg-amber-500 text-black rounded p-2">Neues Rezept</button>
-    </aside>
-
-    <main id="app" class="flex-1 overflow-y-auto p-6 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-      <!-- JS rendert hier RecipeCards -->
-    </main>
-  </div>
+      <button id="btn-new">Neues Rezept</button>
+    </section>
+    <section id="app"></section>
+    <!-- Modales Rezept-Formular/Detailansicht -->
+    <div id="modal" class="hidden"></div>
+  </main>
+  <footer>
+    <a href="/src/html/impressum.html">Impressum</a> |
+    <a href="/src/html/datenschutz.html">Datenschutz</a>
+  </footer>
 </body>
 </html>

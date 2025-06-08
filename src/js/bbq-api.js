@@ -1,7 +1,29 @@
-const API = 'http://localhost:3000/recipes';
+const base = "http://localhost:3000/recipes";
 
-export const getAll  = () => fetch(API).then(r=>r.json());
-export const getOne  = id => fetch(`${API}/${id}`).then(r=>r.json());
-export const create  = data => fetch(API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)}).then(r=>r.json());
-export const update  = (id,data)=> fetch(`${API}/${id}`,{method:'PUT',headers:{'Content-Type':'application/json'},body:JSON.stringify(data)}).then(r=>r.json());
-export const remove  = id => fetch(`${API}/${id}`,{method:'DELETE'});
+export async function getAll() {
+  const res = await fetch(base);
+  return res.json();
+}
+export async function get(id) {
+  const res = await fetch(`${base}/${id}`);
+  return res.json();
+}
+export async function create(recipe) {
+  const res = await fetch(base, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(recipe),
+  });
+  return res.json();
+}
+export async function update(id, recipe) {
+  const res = await fetch(`${base}/${id}`, {
+    method: "PUT",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(recipe),
+  });
+  return res.json();
+}
+export async function remove(id) {
+  await fetch(`${base}/${id}`, { method: "DELETE" });
+}

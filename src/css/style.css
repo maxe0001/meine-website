@@ -1,6 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Montserrat:wght@400;600;700&display=swap");
 
 /* === Grund­variablen =================================== */
@@ -248,3 +245,123 @@ footer a.active {
     page-break-inside: avoid;
   }
 }
+
+/* === BBQ Point Spezial (am Ende!) ===================== */
+body.page-bbq {
+  background: #272727;           /* z.B. dunkler BBQ-Look */
+}
+
+body.page-bbq main {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+/* === BBQ Controls oben === */
+#bbq-controls {
+  display: flex;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+#bbq-controls input,
+#bbq-controls select,
+#bbq-controls button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+#bbq-controls input,
+#bbq-controls select {
+  min-width: 150px;
+}
+#bbq-controls button {
+  background: #c5791c;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+#bbq-controls button:hover {
+  background: #965e17;
+}
+
+/* === BBQ Point Rezeptkarten === */
+.bbq-card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+.bbq-card {
+  background: #fff7eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.bbq-card:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+.bbq-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+.bbq-card .bbq-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0.7rem 1rem 0.5rem;
+}
+.bbq-card .bbq-date {
+  margin: 0 1rem 0.8rem;
+  font-size: 0.95rem;
+  color: #b97d27;
+}
+
+/* === Modal für Detail/Editor === */
+#modal {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 10;
+}
+#modal.hidden { display: none !important; }
+#modal .modal-content {
+  background: #fff7eb;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.35);
+  min-width: 320px;
+}
+#modal label {
+  display: block;
+  margin-top: 1rem;
+  margin-bottom: 0.3rem;
+}
+#modal input,
+#modal textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  margin-bottom: 0.6rem;
+  font-size: 1rem;
+  background: #fff;
+}
+#modal button {
+  margin-right: 0.8rem;
+  padding: 0.5rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  background: #c5791c;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+#modal button.cancel { background: #888; }
+
+/* === Utility === */
+.hidden { display: none !important; }
