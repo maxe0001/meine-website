@@ -8,18 +8,18 @@ import markerUrl from "../img/custom-marker.png?url";
 import shadowUrl from "leaflet/dist/images/marker-shadow.png"; // Schatten (optional)
 
 const customIcon = L.icon({
-  iconUrl:      markerUrl,
-  shadowUrl:    shadowUrl,
-  iconSize:     [32, 48],   // Breite, Höhe
-  iconAnchor:   [16, 48],   // Punkt, der exakt auf der Koordinate sitzt
-  popupAnchor:  [0, -46]    // Position des Popups relativ zur Spitze
+  iconUrl: markerUrl,
+  shadowUrl: shadowUrl,
+  iconSize: [32, 48], // Breite, Höhe
+  iconAnchor: [16, 48], // Punkt, der exakt auf der Koordinate sitzt
+  popupAnchor: [0, -46], // Position des Popups relativ zur Spitze
 });
 
 /* ②   Karte initialisieren */
 const map = L.map("map").setView([51.96, 7.62], 6);
 
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-  attribution: "&copy; OpenStreetMap-Mitwirkende"
+  attribution: "&copy; OpenStreetMap-Mitwirkende",
 }).addTo(map);
 
 /* ③   Beispielmarker mit eigenem Icon */

@@ -1,39 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Weltkarte</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weltkarte</title>
 
-  <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style.css" />
 
-  <style>
-    #map { height: 80vh; }
-  </style>
-</head>
+    <style>
+      #map {
+        height: 80vh;
+      }
+    </style>
+  </head>
 
-<body class="page-karte">
+  <body class="page-karte">
+    <header>
+      <nav>
+        <a href="/index.html">Start</a>
+        <a href="/src/html/rezepte.html">Rezeptliste</a>
+        <a href="/src/html/bilder.html">Bilder</a>
+        <a href="/src/html/karte.html">Karte</a>
+        <a href="/src/html/bbq.html">BBQ Point</a>
+      </nav>
+    </header>
 
-  <header>
-    <nav>
-      <a href="/index.html">Start</a>
-      <a href="/src/html/rezepte.html">Rezeptliste</a>
-      <a href="/src/html/bilder.html">Bilder</a>
-      <a href="/src/html/karte.html">Karte</a>
-    </nav>
-  </header>
+    <main>
+      <h1>Leaflet-Karte</h1>
+      <div id="map"></div>
+    </main>
 
-  <main>
-    <h1>Leaflet-Karte</h1>
-    <div id="map"></div>
-  </main>
+    <footer>
+      <a href="/src/html/impressum.html">Impressum</a> |
+      <a href="/src/html/datenschutz.html">Datenschutz</a>
+    </footer>
 
-  <footer>
-  <a href="/src/html/impressum.html">Impressum</a> |
-  <a href="/src/html/datenschutz.html">Datenschutz</a>
-</footer>
-
-  <!-- Leaflet & Marker-Grafiken werden in karte.js importiert -->
-  <script type="module" src="../js/karte.js"></script>
-</body>
+    <!-- Leaflet & Marker-Grafiken werden in karte.js importiert -->
+    <script type="module" src="../js/karte.js"></script>
+  </body>
 </html>

@@ -1,102 +1,156 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Rezeptliste</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rezeptliste</title>
 
-  <!-- Basis-Stylesheet -->
-  <link rel="stylesheet" href="../css/style.css">
-</head>
+    <!-- Basis-Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
 
-<body class="page-rezepte">
-  <header>
-    <nav>
-      <a href="/index.html">Start</a>
-      <a href="/src/html/rezepte.html">Rezeptliste</a>
-      <a href="/src/html/bilder.html">Bilder</a>
-      <a href="/src/html/karte.html">Karte</a>
-    </nav>
-  </header>
+  <body class="page-rezepte">
+    <header>
+      <nav>
+        <a href="/index.html">Start</a>
+        <a href="/src/html/rezepte.html">Rezeptliste</a>
+        <a href="/src/html/bilder.html">Bilder</a>
+        <a href="/src/html/karte.html">Karte</a>
+        <a href="/src/html/bbq.html">BBQ Point</a>
+      </nav>
+    </header>
 
-  <aside>
-    <p>Rezept-Tipps &amp; Hinweise</p>
-  </aside>
+    <aside>
+      <p>Hier könnte Ihre Werbung stehen</p>
+    </aside>
 
-  <main>
-    <h1>Rezeptliste</h1>
+    <main>
+      <h1>Rezeptliste</h1>
 
-    <section class="recipes">
+      <section class="recipes">
+        <!-- Karte 1 -->
+        <article class="recipe-card">
+          <img src="/src/img/cola-bier.webp" alt="Cola Bier" />
+          <h2>Cola Bier (Diesel)</h2>
+          <ol class="steps">
+            <li><span class="icon">🥤</span>Zutaten: Cola und Bier</li>
+            <li>
+              <span class="icon">💡</span>Empfehlung: Coca-Cola Cherry / Vanille
+              + Pils
+            </li>
+            <li>
+              <span class="icon">🍺</span>Glas zu 80 % mit Bier füllen, dann
+              Cola hinzufügen
+            </li>
+            <li>
+              <span class="icon">❄️</span>Eiskalt genießen (keine Zero-Produkte)
+            </li>
+            <li><span class="icon">🍻</span>Kalt servieren</li>
+          </ol>
+        </article>
 
-      <!-- Karte 1 -->
-      <article class="recipe-card">
-        <img src="/src/img/cola-bier.webp" alt="Cola Bier">
-        <h2>Cola Bier (Diesel)</h2>
-        <ol class="steps">
-          <li><span class="icon">🥤</span>Zutaten: Cola und Bier</li>
-          <li><span class="icon">💡</span>Empfehlung: Coca-Cola Cherry / Vanille + Pils</li>
-          <li><span class="icon">🍺</span>Glas zu 80 % mit Bier füllen, dann Cola hinzufügen</li>
-          <li><span class="icon">❄️</span>Eiskalt genießen (keine Zero-Produkte)</li>
-          <li><span class="icon">🍻</span>Kalt servieren</li>
-        </ol>
-      </article>
+        <!-- Karte 2 -->
+        <article class="recipe-card">
+          <img src="/src/img/cuba-libre.webp" alt="Cuba Libre" />
+          <h2>Cuba Libre</h2>
+          <ol class="steps">
+            <li>
+              <span class="icon">🥃</span>Rum, Cola, Limetten, Rohrzucker, Eis
+            </li>
+            <li>
+              <span class="icon">🍋</span>Limettenstücke leicht zerdrücken
+            </li>
+            <li><span class="icon">🥄</span>4 cl Rum + 12 cl Cola</li>
+            <li>
+              <span class="icon">❄️</span>Mit Eiswürfeln auffüllen &amp;
+              genießen
+            </li>
+          </ol>
+        </article>
 
-      <!-- Karte 2 -->
-      <article class="recipe-card">
-        <img src="/src/img/cuba-libre.webp" alt="Cuba Libre">
-        <h2>Cuba Libre</h2>
-        <ol class="steps">
-          <li><span class="icon">🥃</span>Rum, Cola, Limetten, Rohrzucker, Eis</li>
-          <li><span class="icon">🍋</span>Limettenstücke leicht zerdrücken</li>
-          <li><span class="icon">🥄</span>4 cl Rum + 12 cl Cola</li>
-          <li><span class="icon">❄️</span>Mit Eiswürfeln auffüllen &amp; genießen</li>
-        </ol>
-      </article>
+        <!-- Karte 3 -->
+        <article class="recipe-card">
+          <img src="/src/img/pina-colada.webp" alt="Pina Colada" />
+          <h2>Pina Colada</h2>
+          <ol class="steps">
+            <li>
+              <span class="icon">🍍</span>Rum, Sahne, Ananassaft, Kokosmilch,
+              Eis
+            </li>
+            <li>
+              <span class="icon">🥄</span>6 cl Rum + 6 cl Kokosmilch + 10 cl
+              Ananassaft in den Shaker geben
+            </li>
+            <li>
+              <span class="icon">🔄</span>Alles shaken und in ein Cocktailglas
+              geben
+            </li>
+            <li>
+              <span class="icon">❄️</span>Mit Eiswürfeln auffüllen &amp;
+              genießen
+            </li>
+          </ol>
+        </article>
 
-      <!-- Karte 3 -->
-      <article class="recipe-card">
-        <img src="/src/img/pina-colada.webp" alt="Pina Colada">
-        <h2>Pina Colada</h2>
-        <ol class="steps">
-          <li><span class="icon">🍍</span>Rum, Sahne, Ananassaft, Kokosmilch, Eis</li>
-          <li><span class="icon">🥄</span>6 cl Rum + 6 cl Kokosmilch + 10 cl Ananassaft in den Shaker geben</li>
-          <li><span class="icon">🔄</span>Alles shaken und in ein Cocktailglas geben</li>
-          <li><span class="icon">❄️</span>Mit Eiswürfeln auffüllen &amp; genießen</li>
-        </ol>
-      </article>
+        <!-- Karte 4 -->
+        <article class="recipe-card">
+          <img src="/src/img/heilig-wasser.webp" alt="Heiligwasser" />
+          <h2>Heiligwasser</h2>
+          <ol class="steps">
+            <li>
+              <span class="icon">💧</span>Zutaten: 30 cl reines Quellwasser, 7
+              Tropfen Morgentau, 3 Tränen eines Studenten
+            </li>
+            <li>
+              <span class="icon">⚗️</span>Utensilien: goldener Kelch, geweihtes
+              Tuch, Orgon-Akkumulator
+            </li>
+            <li>
+              <span class="icon">🍺</span>Alles in einem Schwung in den Kelch
+              geben
+            </li>
+            <li>
+              <span class="icon">❄️</span>Gut kühlen und energetisch aufwerten
+            </li>
+            <li>
+              <span class="icon">✨</span>Nach dem Trinken ist man von innen
+              gereinigt
+            </li>
+          </ol>
+        </article>
 
-      <!-- Karte 4 -->
-      <article class="recipe-card">
-        <img src="/src/img/heilig-wasser.webp" alt="Heiligwasser">
-        <h2>Heiligwasser</h2>
-        <ol class="steps">
-          <li><span class="icon">💧</span>Zutaten: 30 cl reines Quellwasser, 7 Tropfen Morgentau, 3 Tränen eines Studenten</li>
-          <li><span class="icon">⚗️</span>Utensilien: goldener Kelch, geweihtes Tuch, Orgon-Akkumulator</li>
-          <li><span class="icon">🍺</span>Alles in einem Schwung in den Kelch geben</li>
-          <li><span class="icon">❄️</span>Gut kühlen und energetisch aufwerten</li>
-          <li><span class="icon">✨</span>Nach dem Trinken ist man von innen gereinigt</li>
-        </ol>
-      </article>
+        <!-- Karte 5 -->
+        <article class="recipe-card">
+          <img src="/src/img/erdbeer-margarita.webp" alt="Erdbeer Margarita" />
+          <h2>Erdbeer Margarita</h2>
+          <ol class="steps">
+            <li>
+              <span class="icon">🍓</span>Zutaten: 300 g gefrorene Erdbeeren,
+              200 ml Tequila, Zitronensaft, Eis
+            </li>
+            <li>
+              <span class="icon">🥄</span>Alle Zutaten mit Crushed Ice in den
+              Mixer geben
+            </li>
+            <li>
+              <span class="icon">🔄</span>Pürieren bis zur Slush-Konsistenz
+            </li>
+            <li>
+              <span class="icon">❄️</span>In ein gut gekühltes Glas geben & Eis
+              auffüllen
+            </li>
+            <li>
+              <span class="icon">🍋</span>Nach Bedarf mit Limettenstücken
+              garnieren
+            </li>
+          </ol>
+        </article>
+      </section>
+    </main>
 
-      <!-- Karte 5 -->
-      <article class="recipe-card">
-        <img src="/src/img/erdbeer-margarita.webp" alt="Erdbeer Margarita">
-        <h2>Erdbeer Margarita</h2>
-        <ol class="steps">
-          <li><span class="icon">🍓</span>Zutaten: 300 g gefrorene Erdbeeren, 200 ml Tequila, Zitronensaft, Eis</li>
-          <li><span class="icon">🥄</span>Alle Zutaten mit Crushed Ice in den Mixer geben</li>
-          <li><span class="icon">🔄</span>Pürieren bis zur Slush-Konsistenz</li>
-          <li><span class="icon">❄️</span>In ein gut gekühltes Glas geben & Eis auffüllen</li>
-          <li><span class="icon">🍋</span>Nach Bedarf mit Limettenstücken garnieren</li>
-        </ol>
-      </article>
-
-    </section>
-  </main>
-
-  <footer>
-  <a href="/src/html/impressum.html">Impressum</a> |
-  <a href="/src/html/datenschutz.html">Datenschutz</a>
-</footer>
-</body>
+    <footer>
+      <a href="/src/html/impressum.html">Impressum</a> |
+      <a href="/src/html/datenschutz.html">Datenschutz</a>
+    </footer>
+  </body>
 </html>
