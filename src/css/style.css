@@ -252,17 +252,40 @@ body.page-bbq {
 }
 
 body.page-bbq main {
-  max-width: 1000px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.bbq-card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 1200px) {
+  .flame-video-wrap, .bbq-flames { width: 340px; }
+  .bbq-card-list { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 800px) {
+  .flame-video-wrap, .bbq-flames { width: 220px; }
+  .bbq-card-list { grid-template-columns: 1fr; }
+  .bbq-hero-title { font-size: 2.2rem; }
 }
 
 /* === BBQ Controls oben === */
 #bbq-controls {
   display: flex;
+  justify-content: center;
   gap: 1rem;
-  margin: 1.5rem 0;
+  margin: 3.8rem auto 2.5rem auto;
+  max-width: 700px;
 }
+
 #bbq-controls input,
 #bbq-controls select,
 #bbq-controls button {
@@ -365,3 +388,127 @@ body.page-bbq main {
 
 /* === Utility === */
 .hidden { display: none !important; }
+
+/* === BBQ Point Spezial: Überschrift und Layout === */
+
+.bbq-hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 3.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.bbq-hero-title {
+  font-family: var(--font-head);
+  font-size: 3.4rem;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  text-shadow: 0 4px 20px #000a;
+  font-weight: 700;
+  margin-bottom: 0.6rem;
+}
+
+/* Controls (Suchfeld usw.) zentrieren und nach unten versetzen */
+#bbq-controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2.5rem auto 2.2rem auto;   /* noch weiter runter */
+  max-width: 600px;
+}
+
+/* BBQ Cards – nebeneinander, Abstand nach oben */
+.bbq-card-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin: 0 auto 2.5rem auto;
+  justify-content: center;
+}
+
+
+.bbq-card {
+  background: #fff7eb;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.13);
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  min-height: 240px;
+  overflow: hidden;
+  margin: 0 0.5rem;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+.bbq-card:hover {
+  transform: translateY(-6px) scale(1.03);
+}
+.bbq-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-bottom: 1px solid #f0e0d0;
+}
+.bbq-card .bbq-title {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0.7rem 1rem 0.5rem;
+  text-align: center;
+}
+.bbq-card .bbq-date {
+  margin: 0 1rem 0.8rem;
+  font-size: 0.95rem;
+  color: #b97d27;
+}
+
+/* === BBQ Hero mit animierter Flamme ================== */
+.bbq-hero {
+  position: relative;
+  width: 100vw;
+  height: 260px;         /* Höhe des Hero-Bereichs */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 80px;   /* Abstand nach unten zu den Controls */
+  overflow: visible;
+}
+
+.flame-video-wrap {
+  position: relative;
+  width: 520px; /* je nach Flammen-Video */
+  height: 150px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.bbq-flames {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 520px;
+  height: 140px;
+  object-fit: cover;
+  filter: brightness(1.15) drop-shadow(0 6px 32px #000c);
+  z-index: 1;
+  pointer-events: none;
+}
+
+
+.bbq-hero-title {
+  position: relative;
+  z-index: 2;
+  color: var(--accent);
+  font-family: var(--font-head);
+  font-size: 3.8rem;
+  text-align: center;
+  text-shadow: 0 4px 16px #000a, 0 1px 0 #fff2;
+  margin: 0 auto;
+  letter-spacing: 0.05em;
+  padding-bottom: 0.8rem;
+  pointer-events: none;
+}

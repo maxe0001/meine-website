@@ -1,26 +1,26 @@
 {
   "recipes": [
     {
-      "id": "1",
       "title": "Pulled Pork",
       "image": "src/img/pulled.jpg",
-      "createdAt": "2024-06-10",
       "steps": [
         "Fleisch würzen",
         "8 h bei 110 °C garen",
         "Zupfen & servieren"
-      ]
+      ],
+      "createdAt": "2024-06-10",
+      "id": "1"
     },
     {
-      "id": "2",
       "title": "Smash Burger",
       "image": "src/img/burger.jpg",
-      "createdAt": "2024-06-11",
       "steps": [
         "Patty smashen",
         "Cheese drauf",
         "Bun & Sauce"
-      ]
+      ],
+      "createdAt": "2024-06-11",
+      "id": "2"
     },
     {
       "title": "haxe 2",
@@ -30,6 +30,24 @@
       ],
       "createdAt": "2025-06-20",
       "id": "83b7"
+    },
+    {
+      "title": "Rippchen",
+      "image": "/src/img/rippchen.jpg",
+      "steps": [
+        "-Silberhaut abziehen",
+        "-Würzen mit Paprika, Salz und Pfeffer",
+        "-auf dem Smoker für 6h bei niedriger Temperatur garen"
+      ],
+      "createdAt": "2025-06-08",
+      "id": "1dee"
+    },
+    {
+      "id": "9dd1",
+      "title": "smasch burger",
+      "image": "",
+      "steps": [],
+      "createdAt": "1222-12-13"
     }
   ]
 }

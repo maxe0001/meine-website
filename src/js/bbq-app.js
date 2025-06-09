@@ -26,8 +26,14 @@ function render() {
         : (a.createdAt||'').localeCompare(b.createdAt||'')
     );
 
-  app.innerHTML = list.map(card).join('');
+  // Rezepte nebeneinander anordnen!
+  app.innerHTML = `
+    <div class="bbq-card-list">
+      ${list.map(card).join('')}
+    </div>
+  `;
 }
+
 
 // Einzelne Rezeptkarte (HTML)
 function card({id, title, image}) {

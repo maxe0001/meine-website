@@ -8,6 +8,7 @@
   <script type="module" src="../js/bbq-app.js" defer></script>
 </head>
 <body class="page-bbq">
+
   <header>
     <nav>
       <a href="/src/html/index.html">Start</a>
@@ -17,22 +18,39 @@
       <a href="/src/html/bbq.html">BBQ Point</a>
     </nav>
   </header>
+
   <aside>
     <p>BBQ Point – Rezepte-Manager</p>
   </aside>
+
   <main>
+    <!-- Hero Bereich -->
+    <section class="bbq-hero">
+      <div class="bbq-hero-center">
+        <div class="flame-video-wrap">
+          <video class="bbq-flames" src="../img/flame.mp4" autoplay muted loop playsinline></video>
+          <h1 class="bbq-hero-title">BBQ Point</h1>
+        </div>
+      </div>
+    </section>
+
+    <!-- Controls -->
     <section id="bbq-controls">
-      <input id="search" placeholder="Rezept suchen..." />
+      <input id="search" placeholder="Rezept suchen…" />
       <select id="sort">
         <option value="title">Alphabetisch</option>
         <option value="createdAt">Datum</option>
       </select>
       <button id="btn-new">Neues Rezept</button>
     </section>
-    <section id="app"></section>
-    <!-- Modales Rezept-Formular/Detailansicht -->
+
+    <!-- Karten-Grid -->
+    <section id="app" class="bbq-card-list"></section>
+
+    <!-- Modal -->
     <div id="modal" class="hidden"></div>
   </main>
+
   <footer>
     <a href="/src/html/impressum.html">Impressum</a> |
     <a href="/src/html/datenschutz.html">Datenschutz</a>
