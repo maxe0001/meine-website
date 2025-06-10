@@ -2,11 +2,13 @@
   "recipes": [
     {
       "title": "Pulled Pork",
-      "image": "src/img/pulled.jpg",
+      "image": "/src/img/pulled-pork.jpg",
       "steps": [
-        "Fleisch würzen",
-        "8 h bei 110 °C garen",
-        "Zupfen & servieren"
+        "-Schweinenacken mit Rub einreiben (Salz, Pfeffer, brauner Zucker, Kreuzkümmel, Paprika).",
+        "-Für 8-12 Stunden bei niedriger Temperatur (ca. 110-130°C) indirekt smoken/garen.",
+        "-Regelmäßig mit Apfelessig-Mischung besprühen.",
+        "-Bei ca. 75°C Kerntemperatur in Alufolie oder Butcher Paper wickeln.",
+        "-Bei 90-95°C Kerntemperatur vom Grill nehmen und ruhen lassen, dann auseinanderzupfen."
       ],
       "createdAt": "2024-06-10",
       "id": "1"
@@ -15,18 +17,24 @@
       "title": "Smash Burger",
       "image": "src/img/burger.jpg",
       "steps": [
-        "Patty smashen",
-        "Cheese drauf",
-        "Bun & Sauce"
+        "Rinderhackfleisch (mindestens 20% Fettanteil) zu lockeren Kugeln formen (ca. 80-100g pro Burger), nicht pressen.",
+        "Eine gusseiserne Pfanne oder Grillplatte extrem heiß werden lassen.",
+        "Die Hackfleischkugel in die heiße Pfanne legen und sofort mit einem stabilen Pfannenwender (oder Burgerpresse) fest und flach auf ca. 0,5 cm Dicke pressen.",
+        "Für 60-90 Sekunden braten, bis die Unterseite eine dunkle, knusprige Kruste (Maillard-Reaktion) entwickelt hat. Mit Salz und Pfeffer würzen.",
+        "Patty wenden, sofort eine Scheibe Käse darauf legen und weitere 30-60 Sekunden braten, bis der Käse geschmolzen ist und das Patty gar ist. Auf getoastete Burgerbrötchen legen und belegen."
       ],
       "createdAt": "2024-06-11",
       "id": "2"
     },
     {
-      "title": "haxe 2",
-      "image": "",
+      "title": "Schweinehaxe",
+      "image": "/src/img/schweinshaxe.jpg",
       "steps": [
-        "cf"
+        "-Schweinshaxe waschen und Schwarte rautenförmig einschneiden",
+        "-Mit Salz, Pfeffer, Kümmel und Knoblauch einreiben",
+        "-Im Ofen bei ca. 160-180°C langsam garen, dabei regelmäßig mit Bier oder Salzwasser übergießen",
+        "-Für die letzten 30-45 Minuten die Temperatur auf 200-220°C erhöhen oder Grillfunktion nutzen, um die Schwarte knusprig zu bekommen",
+        "-Servieren, idealerweise mit Knödeln und Krautsalat"
       ],
       "createdAt": "2025-06-20",
       "id": "83b7"
@@ -43,11 +51,136 @@
       "id": "1dee"
     },
     {
-      "id": "9dd1",
-      "title": "smasch burger",
+      "title": "Schaschlik",
       "image": "",
-      "steps": [],
-      "createdAt": "1222-12-13"
+      "steps": [
+        "-Fleisch (Schweinefleisch, z.B. Nacken) und Gemüse (Zwiebeln, Paprika) in mundgerechte Stücke schneiden.",
+        "-Fleisch marinieren (Öl, Paprika, Salz, Pfeffer, Zwiebeln, Essig). Mindestens 2 Stunden.",
+        "-Fleisch und Gemüse abwechselnd auf Spieße stecken.",
+        "-Auf dem Grill von allen Seiten garen, bis das Fleisch gar und leicht gebräunt ist.",
+        "-Heiß servieren, oft mit Reis oder Brot."
+      ],
+      "createdAt": "2025-06-10",
+      "id": "731a"
+    },
+    {
+      "id": "e354",
+      "title": "Roastbeef",
+      "image": "",
+      "steps": [
+        "-Roastbeef parieren, mit Salz und Pfeffer würzen. ",
+        "-Optional mit Senf einreiben.",
+        "-In einer Pfanne rundherum scharf anbraten, um Röstaromen zu entwickeln.",
+        "-Im Ofen bei niedriger Temperatur (ca. 100-120°C) bis zur gewünschten Kerntemperatur (z.B. 54-56°C für Medium Rare) garen.",
+        "-Aus dem Ofen nehmen und für 10-15 Minuten in Alufolie ruhen lassen.",
+        "-In dünnen Scheiben gegen die Faser aufschneiden und servieren."
+      ],
+      "createdAt": "1999-10-12"
+    },
+    {
+      "id": "afb6",
+      "title": "Bacon Bomb",
+      "image": "/src/img/bacon-bomb.jpg",
+      "steps": [
+        "-Hackfleisch (halb Rind, halb Schwein) mit Gewürzen (Salz, Pfeffer, Paprika, Zwiebeln) vermischen.",
+        "-Füllung (z.B. Käse, Jalapeños, Pilze) vorbereiten.",
+        "-Hackfleisch flach ausbreiten, Füllung darauf verteilen und zu einer Rolle formen.",
+        "-Die Rolle komplett in ein Bacon-Netz einwickeln.",
+        "-Indirekt auf dem Grill oder im Ofen bei ca. 160-180°C garen, bis die Kerntemperatur ca. 70-75°C erreicht ist und der Bacon knusprig ist."
+      ],
+      "createdAt": "2021-12-13"
+    },
+    {
+      "id": "78a1",
+      "title": "Bratwurst",
+      "image": "/src/img/bratwurst.jpg",
+      "steps": [
+        "-Frische Bratwürste vorbereiten.",
+        "-Auf dem Grill oder in der Pfanne bei mittlerer Hitze braten.",
+        "-Regelmäßig wenden, um eine gleichmäßige Bräunung zu erzielen.",
+        "-Garen, bis sie durchgegart und die Haut goldbraun und leicht knusprig ist.",
+        "-Servieren, klassisch mit Senf und Brötchen."
+      ],
+      "createdAt": "2000-01-01"
+    },
+    {
+      "title": "Entrecôte-Steak",
+      "image": "/src/img/entrecote-steak.jpg",
+      "steps": [
+        "-Entrecôte-Steak auf Raumtemperatur bringen, mit Salz und Pfeffer würzen.",
+        "-In einer sehr heißen Pfanne (Gusseisen empfohlen) oder auf dem Grill von jeder Seite scharf anbraten.",
+        "-Hitze reduzieren und bis zur gewünschten Garstufe weiterbraten (z.B. ca. 3-4 Minuten pro Seite für Medium Rare bei 2-3 cm Dicke).",
+        "-Kurz ruhen lassen, damit sich die Säfte verteilen.",
+        "Servieren, eventuell mit Kräuterbutter."
+      ],
+      "createdAt": "2007-01-13",
+      "id": "b658"
+    },
+    {
+      "id": "f269",
+      "title": "Kartoffelspieße",
+      "image": "",
+      "steps": [
+        "-Kleine Kartoffeln vorkochen, bis sie bissfest sind. Abkühlen lassen.",
+        "-Gekochte Kartoffeln mit Öl, Rosmarin, Thymian, Salz und Pfeffer marinieren.",
+        "-Auf Spieße stecken. Optional mit Zwiebeln, Paprika oder Speckwürfeln.",
+        "-Auf dem Grill oder im Ofen bei mittlerer Hitze goldbraun und knusprig garen.",
+        "-Heiß servieren, eventuell mit einem Dip."
+      ],
+      "createdAt": "2011-03-03"
+    },
+    {
+      "id": "4545",
+      "title": "Hähnchen-Mango-Spieße",
+      "image": "/src/img/hähnchen-mango.jpg",
+      "steps": [
+        "-Hähnchenbrust in mundgerechte Stücke schneiden. ",
+        "-Reife Mango würfeln.",
+        "-Hähnchen marinieren (z.B. mit Limettensaft, Chili, Ingwer, Sojasauce).",
+        "-Hähnchenstücke und Mangowürfel abwechselnd auf Spieße stecken.",
+        "-Auf dem Grill oder in der Pfanne garen, bis das Hähnchen durch ist und leicht gebräunt ist.",
+        "-Sofort servieren, eventuell mit frischem Koriander bestreuen."
+      ],
+      "createdAt": "2023-06-12"
+    },
+    {
+      "id": "169a",
+      "title": "Gemüsespieße",
+      "image": "/src/img/gemuesespiesse.jpg",
+      "steps": [
+        "-Verschiedenes Gemüse (z.B. Zucchini, Paprika, Kirschtomaten, Zwiebeln, Pilze) in mundgerechte Stücke schneiden.",
+        "-Gemüse mit Olivenöl, Salz, Pfeffer und Kräutern (z.B. Oregano, Basilikum) marinieren.",
+        "-Gemüsestücke abwechselnd auf Spieße stecken.",
+        "-Auf dem Grill oder im Ofen garen, bis das Gemüse bissfest und leicht gebräunt ist.",
+        "-Heiß als Beilage oder leichte Mahlzeit servieren."
+      ],
+      "createdAt": "2003-08-17"
+    },
+    {
+      "id": "c17b",
+      "title": "Cheeseburger",
+      "image": "/src/img/cheeseburger.jpg",
+      "steps": [
+        "-Hackfleisch (Rind) zu Patties formen, leicht salzen und pfeffern.",
+        "-Patties auf dem Grill oder in einer heißen Pfanne braten, bis zur gewünschten Garstufe.",
+        "-Kurz vor Ende der Garzeit eine Scheibe Käse (Cheddar empfohlen) auf das Patty legen und schmelzen lassen.",
+        "-Burgerbrötchen aufschneiden und kurz antoasten.",
+        "Burger nach Belieben belegen: Salat, Tomate, Zwiebel, Essiggurken, Soßen."
+      ],
+      "createdAt": "1998-07-19"
+    },
+    {
+      "id": "2d1a",
+      "title": "Schweinesteak",
+      "image": "",
+      "steps": [
+        "-Schweinesteaks (z.B. Nacken oder Lachs) vorbereiten, auf Raumtemperatur bringen, salzen und pfeffern.",
+        "-Auf dem Grill oder in einer heißen Pfanne von jeder Seite scharf anbraten.",
+        "-Hitze reduzieren und bis zur gewünschten Garstufe weiterbraten (Kerntemperatur ca. 62-65°C).",
+        "-Kurz ruhen lassen, damit die Säfte sich verteilen.",
+        "-Heiß servieren, eventuell mit Kräuterbutter oder einer Soße."
+      ],
+      "createdAt": "2012-12-21"
     }
   ]
 }
