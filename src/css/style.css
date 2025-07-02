@@ -392,3 +392,9 @@ body.page-bbq main {
 .confirm-modal-actions .confirm-no { background-color: #ccc; }
 
 .hidden { display: none !important; }
+
+aside .aside-ad-img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
