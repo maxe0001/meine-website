@@ -209,10 +209,22 @@ body.page-bilder {
 body.page-legal main {
   max-width: 800px; margin: auto; line-height: 1.6;
 }
+body.page-karte {
+  background: linear-gradient(180deg, #555 0%, #222 100%);
+}
 
 /* === Footer aktive Links =============================== */
 footer a.active {
   color: var(--accent); pointer-events: none; text-decoration: underline;
+}
+footer a.legal-link {
+  color: #ff9800;
+  font-weight: bold;
+  text-decoration: underline;
+  transition: color 0.2s;
+}
+footer a.legal-link:hover {
+  color: #c5791c;
 }
 
 /* === Druckoptimierung ================================= */
@@ -397,4 +409,11 @@ aside .aside-ad-img {
   width: 100%;
   height: auto;
   border-radius: 8px;
+}
+
+/* Fügt den Galerie-Bildern einen leuchtenden Effekt hinzu */
+.gallery figure:hover {
+  box-shadow: 0 0 15px 5px rgba(214, 167, 95, 0.4); /* Leuchten in deiner Akzentfarbe */
+  /* Die bisherige Transformation beibehalten und erweitern */
+  transform: translateY(-6px) scale(1.04);
 }
