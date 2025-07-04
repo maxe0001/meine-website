@@ -417,3 +417,12 @@ aside .aside-ad-img {
   /* Die bisherige Transformation beibehalten und erweitern */
   transform: translateY(-6px) scale(1.04);
 }
+
+/* Kleiner Abstand für die Sektionen in der Aside-Box */
+.aside-section {
+  margin-top: 2rem;
+}
+.aside-section h5 {
+  color: var(--accent);
+  margin-bottom: 0.5rem;
+}

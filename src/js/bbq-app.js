@@ -14,6 +14,13 @@ let recipes = [];
 
 async function load() {
   recipes = await api.getAll();
+
+  // Zählt alle Rezepte und aktualisiert die Anzeige in der Sidebar für die Anzahl der Rezepte (Anzeige)
+  const countElement = document.getElementById('recipe-count');
+  if (countElement) {
+    countElement.textContent = recipes.length;
+  }
+
   render();
 }
 
@@ -32,7 +39,7 @@ function render() {
 }
 
 function card({ id, title, image }) {
-  // Wichtig: Das src-Attribut kann sowohl http-URLs als auch Base64-Daten-URLs verarbeiten.
+  // Wichtig: Das src-Attribut kann sowohl http-URLs als auch Base64-Daten-URLs verarbeiten !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
   return /*html*/`
     <article class="bbq-card" data-id="${id}">
       <img src="${image || 'https://placehold.co/320x180/fff7eb/333?text=Kein+Bild'}" alt="Vorschaubild für ${title}" style="width:100%;height:180px;object-fit:cover;">
@@ -102,7 +109,6 @@ function showForm(recipe = {}) {
         <label>Titel:</label>
         <input name="title" value="${recipe.title || ''}" required>
         
-        <!-- NEU: Drag-and-Drop-Bereich für Bilder -->
         <label>Bild:</label>
         <div id="drop-zone" class="drop-zone">
             <span class="drop-zone-prompt">Bild hierher ziehen<br>oder klicken zum Auswählen</span>

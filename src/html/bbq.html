@@ -11,7 +11,7 @@
 
   <header>
     <nav>
-      <a href="/src/html/index.html">Start</a>
+      <a href="/index.html">Start</a>
       <a href="/src/html/rezepte.html">Rezeptliste</a>
       <a href="/src/html/bilder.html">Bilder</a>
       <a href="/src/html/karte.html">Karte</a>
@@ -20,11 +20,30 @@
   </header>
 
   <aside>
-    <p>BBQ Point – Rezepte-Manager</p>
+    <h4>BBQ Point – Rezepte-Manager</h4>
+
+    <div class="aside-section">
+      <h5>Übersicht</h5>
+      <p><strong>Rezepte gesamt:</strong> <span id="recipe-count">...</span></p>
+      <p><strong>Favorit der Woche:</strong> Pulled Pork</p>
+    </div>
+
+    <div class="aside-section">
+      <h5>Anleitung</h5>
+      <ul>
+        <li>Klicke auf "Neues Rezept", um zu starten.</li>
+        <li>Bestehende Rezepte kannst du zur Bearbeitung anklicken.</li>
+        <li>Nutze die Suche, um Rezepte schnell zu finden.</li>
+      </ul>
+    </div>
+    
+    <div class="aside-section">
+      <h5>Tipp des Tages</h5>
+      <p>Für eine perfekte Kruste das Fleisch vor dem Grillen immer gut trockentupfen!</p>
+    </div>
   </aside>
 
   <main>
-    <!-- Hero Bereich -->
     <section class="bbq-hero">
       <div class="bbq-hero-center">
         <div class="flame-video-wrap">
@@ -34,7 +53,6 @@
       </div>
     </section>
 
-    <!-- Controls -->
     <section id="bbq-controls">
       <input id="search" placeholder="Rezept suchen…" />
       <select id="sort">
@@ -44,10 +62,8 @@
       <button id="btn-new">Neues Rezept</button>
     </section>
 
-    <!-- Karten-Grid -->
     <section id="app" class="bbq-card-list"></section>
 
-    <!-- Modal -->
     <div id="modal" class="hidden"></div>
   </main>
 
