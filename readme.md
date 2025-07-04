@@ -44,6 +44,7 @@ Die rechte Seitenspalte auf der "BBQ Point"-Seite wurde bewusst als Mini-Dashboa
 * **Responsives Design:** Die Bildergalerie und andere Seiten sind so gestaltet, dass sie auch auf kleineren Bildschirmbreiten (z.B. 600px) gut erkennbar und bedienbar sind.
 * **Moderne Tool-Chain:** Das Projekt nutzt Vite als schnellen Build-Tool, ESLint zur Sicherung der Code-Qualität und Prettier zur automatischen Code-Formatierung.
 * **Lokale API:** Mittels `json-server` wird eine lokale REST-API simuliert, die als Datenbank für die BBQ-Rezepte dient.
+* **Sonstiges:** Wenn man über die Entwicklertools die breite auf 600 pixel einstellt werden die Seiten immernoch bestmöglich dargestellt.
 
 ## Verwendete Technologien
 
