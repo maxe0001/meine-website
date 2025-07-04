@@ -1,6 +1,6 @@
 # Projekt: Meine Webseite
 
-Dies ist ein umfassendes Web-Projekt, das verschiedene moderne Web-Technologien und Konzepte demonstriert. Es umfasst sowohl statische Inhaltsseiten als auch eine dynamische, datenbankgesteuerte Web-Anwendung zur Verwaltung von Rezepten.
+Das ist mein Web-Projekt, das verschiedene moderne Web-Technologien und Konzepte demonstriert. Es umfasst sowohl statische Inhaltsseiten als auch eine dynamische, datenbankgesteuerte Web-Anwendung zur Verwaltung von Rezepten. Ich bin design-technisch kein Maestro, aber an manchen Stellen waren ein paar gute Einfälle dabei.
 
 ## Inhaltsverzeichnis
 
@@ -18,11 +18,11 @@ Dies ist ein umfassendes Web-Projekt, das verschiedene moderne Web-Technologien 
 
 Das Projekt besteht aus fünf Hauptseiten, die über eine zentrale Navigation erreichbar sind:
 
-* **Startseite:** Eine minimalistische Landing-Page, die als zentraler Einstiegspunkt dient.
+* **Startseite:** Eine minimalistische Startseite, die als zentraler Einstiegspunkt dient. Mit aufdringlicher Werbung damit es so detailgetreu wie möglich ist.
 * **Rezeptliste:** Eine statische Seite mit einer Sammlung von Getränkerezepten im ansprechenden Kachel-Design.
-* **Bildergalerie:** Eine visuelle Galerie von "Teufelsfrüchten", ergänzt durch eine informative Sidebar mit Lexikon-Charakter.
-* **Karte:** Eine interaktive Weltkarte zur Darstellung geografischer Daten, umgesetzt mit der Leaflet.js-Bibliothek.
-* **BBQ Point:** Eine dynamische Web-Anwendung zur Verwaltung von Grillrezepten mit Anbindung an eine lokale Datenbank.
+* **Bildergalerie:** Eine visuelle Galerie von "Teufelsfrüchten", ergänzt durch Sidebar mit Lexikon. Hintergrund habe ich Schwarz gelassen weil ich winde das die Farben so besser wirken.
+* **Karte:** Eine interaktive Weltkarte zur Darstellung geografischer Daten, umgesetzt mit der Leaflet.js-Bibliothek. Zurzeit zeigt diese auf Dresden.
+* **BBQ Point:** Das ist das Hauptprojekt (die Große Aufgabe). Eine dynamische Web-Anwendung zur Verwaltung von Grillrezepten mit Anbindung an eine lokale Datenbank.
 
 ## Features
 

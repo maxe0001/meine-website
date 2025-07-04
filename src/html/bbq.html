@@ -1,75 +1,86 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BBQ Point</title>
-  <link rel="stylesheet" href="../css/style.css" />
-  <script type="module" src="../js/bbq-app.js" defer></script>
-</head>
-<body class="page-bbq">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BBQ Point</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <script type="module" src="../js/bbq-app.js" defer></script>
+  </head>
+  <body class="page-bbq">
+    <header>
+      <nav>
+        <a href="/index.html">Start</a>
+        <a href="/src/html/rezepte.html">Rezeptliste</a>
+        <a href="/src/html/bilder.html">Bilder</a>
+        <a href="/src/html/karte.html">Karte</a>
+        <a href="/src/html/bbq.html">BBQ Point</a>
+      </nav>
+    </header>
 
-  <header>
-    <nav>
-      <a href="/index.html">Start</a>
-      <a href="/src/html/rezepte.html">Rezeptliste</a>
-      <a href="/src/html/bilder.html">Bilder</a>
-      <a href="/src/html/karte.html">Karte</a>
-      <a href="/src/html/bbq.html">BBQ Point</a>
-    </nav>
-  </header>
+    <aside>
+      <h4>BBQ Point – Rezepte-Manager</h4>
 
-  <aside>
-    <h4>BBQ Point – Rezepte-Manager</h4>
-
-    <div class="aside-section">
-      <h5>Übersicht</h5>
-      <p><strong>Rezepte gesamt:</strong> <span id="recipe-count">...</span></p>
-      <p><strong>Favorit der Woche:</strong> Pulled Pork</p>
-    </div>
-
-    <div class="aside-section">
-      <h5>Anleitung</h5>
-      <ul>
-        <li>Klicke auf "Neues Rezept", um zu starten.</li>
-        <li>Bestehende Rezepte kannst du zur Bearbeitung anklicken.</li>
-        <li>Nutze die Suche, um Rezepte schnell zu finden.</li>
-      </ul>
-    </div>
-    
-    <div class="aside-section">
-      <h5>Tipp des Tages</h5>
-      <p>Für eine perfekte Kruste das Fleisch vor dem Grillen immer gut trockentupfen!</p>
-    </div>
-  </aside>
-
-  <main>
-    <section class="bbq-hero">
-      <div class="bbq-hero-center">
-        <div class="flame-video-wrap">
-          <video class="bbq-flames" src="../img/flame.mp4" autoplay muted loop playsinline></video>
-          <h1 class="bbq-hero-title">BBQ Point</h1>
-        </div>
+      <div class="aside-section">
+        <h5>Übersicht</h5>
+        <p>
+          <strong>Rezepte gesamt:</strong> <span id="recipe-count">...</span>
+        </p>
+        <p><strong>Favorit der Woche:</strong> Pulled Pork</p>
       </div>
-    </section>
 
-    <section id="bbq-controls">
-      <input id="search" placeholder="Rezept suchen…" />
-      <select id="sort">
-        <option value="title">Alphabetisch</option>
-        <option value="createdAt">Datum</option>
-      </select>
-      <button id="btn-new">Neues Rezept</button>
-    </section>
+      <div class="aside-section">
+        <h5>Anleitung</h5>
+        <ul>
+          <li>Klicke auf "Neues Rezept", um zu starten.</li>
+          <li>Bestehende Rezepte kannst du zur Bearbeitung anklicken.</li>
+          <li>Nutze die Suche, um Rezepte schnell zu finden.</li>
+        </ul>
+      </div>
 
-    <section id="app" class="bbq-card-list"></section>
+      <div class="aside-section">
+        <h5>Tipp des Tages</h5>
+        <p>
+          Für eine perfekte Kruste das Fleisch vor dem Grillen immer gut
+          trockentupfen!
+        </p>
+      </div>
+    </aside>
 
-    <div id="modal" class="hidden"></div>
-  </main>
+    <main>
+      <section class="bbq-hero">
+        <div class="bbq-hero-center">
+          <div class="flame-video-wrap">
+            <video
+              class="bbq-flames"
+              src="../img/flame.mp4"
+              autoplay
+              muted
+              loop
+              playsinline
+            ></video>
+            <h1 class="bbq-hero-title">BBQ Point</h1>
+          </div>
+        </div>
+      </section>
 
-  <footer>
-    <a href="/src/html/impressum.html" class="legal-link">Impressum</a> |
-    <a href="/src/html/datenschutz.html" class="legal-link">Datenschutz</a>
-  </footer>
-</body>
+      <section id="bbq-controls">
+        <input id="search" placeholder="Rezept suchen…" />
+        <select id="sort">
+          <option value="title">Alphabetisch</option>
+          <option value="createdAt">Datum</option>
+        </select>
+        <button id="btn-new">Neues Rezept</button>
+      </section>
+
+      <section id="app" class="bbq-card-list"></section>
+
+      <div id="modal" class="hidden"></div>
+    </main>
+
+    <footer>
+      <a href="/src/html/impressum.html" class="legal-link">Impressum</a> |
+      <a href="/src/html/datenschutz.html" class="legal-link">Datenschutz</a>
+    </footer>
+  </body>
 </html>
