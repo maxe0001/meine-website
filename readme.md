@@ -68,12 +68,12 @@ Das Projekt besteht aus fünf Hauptseiten, die über eine zentrale Navigation er
 
 Um das Projekt lokal auszuführen, müssen zwei separate Prozesse gestartet werden, da die Webseite (Frontend) und die Rezept-Datenbank (Backend-API) unabhängig voneinander laufen. Dafür werden **zwei separate Terminal-Fenster** benötigt.
 
-#### 1. Terminal: Starten der API-Datenbank
+### 1. Terminal: Starten der API-Datenbank
 
-Gib den folgenden Befehl ein, um den `json-server` zu starten. Dieser simuliert eine Datenbank und stellt die BBQ-Rezepte unter einer API zur Verfügung.
+Gib den folgenden Befehl ein, um den `json-server` zu starten. Dieser dient als lokale Datenbank für den BBQ-Point.
+
 ```bash
 npm run api
-```
 
 #### 2. Terminal: Starten der Webseite
 
